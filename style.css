@@ -72,7 +72,7 @@ header nav ul {
   padding: 0;
   display: flex;
   flex: 1;
-  justify-content: flex-end;
+  justify-content: center; /* Center the navigation items for mobile view */
 }
 
 header nav ul li {
@@ -110,7 +110,14 @@ form button {
   color: #fff;
   font-size: 24px;
   padding: 15px;
-  width: 100%;
+  width: 100%; /* Make the "Search" button take 100% width in mobile view */
+}
+
+/* Make the labels take an equal amount of space on desktop view */
+form label,
+form input,
+form select {
+  flex: 1;
 }
 
 /* -------  Footer ------- */
