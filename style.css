@@ -154,17 +154,19 @@ footer p {
 
   #about {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Align the items in the "About" section vertically */
+    align-items: center; /* Center align the items in the "About" section */
+    text-align: center;
   }
 
   #about img {
-    flex: 1;
     max-width: 400px;
-    margin-right: 20px;
+    margin-right: 20px; /* Add right margin to space out the images from the paragraph */
   }
 
   #about p {
-    flex: 2;
+    max-width: 400px;
+    margin-top: 0; /* Remove top margin to align paragraph with images */
   }
 
   #ideas img {
