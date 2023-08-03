@@ -57,13 +57,13 @@ main img {
 header {
   background-color: #ff385c;
   padding: 20px;
-  text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
   font-size: 72px;
   color: #fff;
+  flex: 1;
 }
 
 header nav ul {
@@ -71,11 +71,16 @@ header nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  flex: 1;
+  justify-content: flex-end;
 }
 
 header nav ul li {
-  margin-right: 20px;
+  margin-left: 20px;
+}
+
+header nav ul li:first-child {
+  margin-left: 0;
 }
 
 header nav ul li a {
