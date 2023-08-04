@@ -14,22 +14,6 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;/* -------  General Styles ------- */
-
-body {
-  font-family: "Lato", sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-h2 {
-  font-size: 26px;
-  font-weight: 400;
-  margin: 0 10px 10px 10px;
-  text-align: center;
-}
-
-h3 {
   font-size: 18px;
   font-weight: 500;
 }
@@ -170,10 +154,16 @@ form button {
   align-items: center;
 }
 
-#host .group {
+#host .host-wrapper {
   display: flex;
   flex-direction: column; /* Align the items in the "Host" section vertically */
   align-items: center; /* Center-align the items in the "Host" section */
+}
+
+#host .group {
+  display: flex;
+  flex-direction: column; /* Align the items in the "Host" section vertically */
+  align-items: flex-start; /* Left-align the items in the "Host" section */
 }
 
 #host .item {
@@ -188,15 +178,12 @@ form button {
 
 #host img {
   width: 100%;
-}
-
-#host .item-double img {
-  max-width: 400px;
+  max-width: 400px; /* Limit the max-width of the image for better layout */
   margin-top: 20px; /* Add margin to create space between the text and the image */
 }
 
 #host h2 {
-  /* Center-align the "Want to Become a Thinkfulbnb Host?" header */
+  /* Center-align the "Want to Become a Thinkfulbnb Host?" header for mobile view */
   text-align: center;
   margin-bottom: 20px; /* Add some bottom margin to separate the header from the other elements */
 }
@@ -268,8 +255,15 @@ footer p {
     grid-template-columns: repeat(2, 1fr); /* Keep the two-column layout */
   }
 
+  #host .host-wrapper {
+    display: flex; /* Use flexbox for desktop view */
+    align-items: flex-start; /* Align items to the top of the flex container */
+  }
+
   #host .group {
-    flex-direction: row; /* Change to row layout for desktop view */
+    display: flex; /* Reset to flex layout */
+    flex-direction: column; /* Align the items in the "Host" section vertically */
+    align-items: flex-start; /* Left-align the items in the "Host" section */
   }
 
   #host .item {
@@ -285,227 +279,18 @@ footer p {
   #host img {
     width: 100%;
     max-width: 400px; /* Limit the max-width of the image for better layout */
-    margin-top: 20px; /* Add margin to create space between the text and the image */
+    margin-top: 0; /* Reset margin for desktop view */
   }
 
   #host h2 {
-    /* Left-align the "Want to Become a Thinkfulbnb Host?" header */
+    /* Left-align the "Want to Become a Thinkfulbnb Host?" header for desktop view */
     text-align: left;
+    margin-bottom: 0; /* Reset margin for desktop view */
   }
 
-}
-  font-weight: 500;
-}
-
-p {
-  line-height: 1.5em;
-  margin: 0;
-}
-
-section {
-  padding: 20px;
-}
-
-section.alternate-background {
-  background-color: #00a699;
-  color: #fff;
-}
-
-main img {
-  width: 100%;
-  height: auto;
-}
-
-/* ---  Groups & Items --- */
-
-.group {
-  display: flex;
-  flex-direction: column;
-}
-
-.item {
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
-}
-
-/* -------  Navigation ------- */
-
-header {
-  background-color: #ff385c;
-  padding: 20px;
-}
-
-.logo {
-  font-family: "Pangolin", cursive;
-  font-size: 72px;
-  color: #fff;
-  flex: 1;
-}
-
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex: 1;
-  justify-content: center; /* Center the navigation items for mobile view */
-}
-
-header nav ul li {
-  margin-left: 20px;
-}
-
-header nav ul li:first-child {
-  margin-left: 0;
-}
-
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* -------  Search Form ------- */
-form {
-  border: 2px solid #ff385c;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap; /* Allow elements to wrap to the next line if necessary */
-}
-
-form label {
-  font-weight: bold;
-  flex: 1;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-/* Create div containers to wrap the form elements */
-.form-field {
-  flex: 1;
-  margin-left: 5px; /* Add margin left to create space horizontally */
-  margin-right: 5px; /* Add margin right to create space horizontally */
-  width: 100%;
-}
-
-form select,
-form input {
-  width: 100%;
-}
-
-form button {
-  background-color: #ff385c;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  padding: 10px;
-  flex: 0 0 auto; /* Keep the "Search" button from growing, and let it take its initial size */
-}
-
-/* -------  Ideas ------- */
-
-#ideas {
-  text-align: center; /* Center-align the "Ideas" section */
-}
-
-#ideas h2 {
-  margin-bottom: 20px; /* Add some bottom margin to create space between the header and the items */
-}
-
-#ideas .group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
-  align-items: center;
-}
-
-#ideas h3 {
-  text-align: center; /* Center-align the headings for each idea */
-}
-
-/* -------  Footer ------- */
-
-footer {
-  background-color: #ff385c;
-  text-align: center;
-}
-
-footer p {
-  color: #fff;
-  padding: 20px;
-  margin: 0;
-}
-
-/* -------  Media Queries ------- */
-
-@media screen and (min-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  /* Rearrange the order of items for desktop view */
+  #host .group {
+    flex-direction: row;
   }
 
-  header nav {
-    margin-top: 10px;
-  }
-
-  #stay form {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #about {
-    display: flex;
-    flex-direction: column; /* Align the items in the "About" section vertically */
-    align-items: center; /* Center align the items in the "About" section */
-  }
-
-  #about img {
-    max-width: 400px;
-    margin-bottom: 20px; /* Add some bottom margin to separate the images from the paragraph */
-  }
-
-  #about p {
-    max-width: 400px;
-    margin-bottom: 20px; /* Add some bottom margin to separate the paragraph from the images */
-  }
-
-  #about h2 {
-    text-align: center;
-  }
-
-  #about .group {
-    flex-direction: row; /* Align the items in the "About" section horizontally */
-  }
-
-  #ideas img {
-    width: 100%;
-  }
-
-  #ideas h3 {
-    text-align: center;
-  }
-
-  #ideas {
-    grid-template-columns: repeat(2, 1fr); /* Keep the two-column layout */
-  }
-
-  #host {
-    display: flex;
-    align-items: center;
-  }
-
-  #host img {
-    flex: 1;
-    max-width: 400px;
-    margin-right: 20px;
-  }
-
-  #host p {
-    flex: 2;
-  }
 }
