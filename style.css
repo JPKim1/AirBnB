@@ -127,6 +127,27 @@ form button {
   flex: 0 0 auto; /* Keep the "Search" button from growing, and let it take its initial size */
 }
 
+/* -------  Ideas ------- */
+
+#ideas {
+  text-align: center; /* Center-align the "Ideas" section */
+}
+
+#ideas h2 {
+  margin-bottom: 20px; /* Add some bottom margin to create space between the header and the items */
+}
+
+#ideas .group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+}
+
+#ideas h3 {
+  text-align: center; /* Center-align the headings for each idea */
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -191,10 +212,7 @@ footer p {
   }
 
   #ideas {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr); /* Keep the two-column layout */
   }
 
   #host {
