@@ -50,7 +50,6 @@ main img {
 
 .item-double {
   flex: 2;
-  margin: 10px; /* Add margin to separate the item-double divs */
 }
 
 /* -------  Navigation ------- */
@@ -156,18 +155,7 @@ footer p {
 
   #stay form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the form elements horizontally */
-  }
-
-  #stay form label,
-  #stay form select,
-  #stay form input {
-    width: 100%; /* Make the form elements take 100% width in mobile view */
-  }
-
-  #stay form button {
-    width: 100%; /* Make the "Search" button take 100% width in mobile view */
+    justify-content: space-between;
   }
 
   #about {
