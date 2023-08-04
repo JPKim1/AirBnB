@@ -156,7 +156,18 @@ footer p {
 
   #stay form {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the form elements horizontally */
+  }
+
+  #stay form label,
+  #stay form select,
+  #stay form input {
+    width: 100%; /* Make the form elements take 100% width in mobile view */
+  }
+
+  #stay form button {
+    width: 100%; /* Make the "Search" button take 100% width in mobile view */
   }
 
   #about {
